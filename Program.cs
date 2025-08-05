@@ -1,27 +1,25 @@
 ﻿using System;
 
-namespace ConsoleApp1
+public class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        public static void Main(string[] args)
-        {
-            CurrencyConverter.RunConverter();
-            NumberComparer.Compare();
-            Calculator.DoMath();
-            UserPreference.GetUserInfo();
-            Voting.CheckEligibility();
-            CurrencyConverter.RunConverter();
+        SwapNumbers sn = new SwapNumbers();
+        sn.GetNumbers();
+        sn.Swap();
+        sn.Display();
+        Console.ReadLine();
 
-            MarksHelper helper = new MarksHelper();
+        Multiplication m = new Multiplication();
+        m.GetNumbers();
 
-        double mark1 = helper.InputMark(1);
-        double mark2 = helper.InputMark(2);
-        double mark3 = helper.InputMark(3);
+        int result = m.Multiply();
+        Console.WriteLine("Multiplication result: " + result);
+        Console.ReadLine();
 
-        double average = (mark1 + mark2 + mark3) / 3;
+        MyInfo info = new MyInfo();
+        info.Details();
+        Console.ReadLine();
 
-        Console.WriteLine("Average Marks: " + average);
-        }
     }
 }

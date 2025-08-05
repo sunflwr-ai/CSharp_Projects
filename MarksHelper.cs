@@ -2,17 +2,17 @@ using System;
 
 public class MarksHelper
 {
-    public double InputMark(int number)
+    public float InputMark(int n)
     {
-        string subject = number switch
+        string subject = n switch
         {
             1 => "Math",
             2 => "Science",
             3 => "English",
-            _ => "Unknown"
+            _ => "Subject"
         };
 
-        Console.Write("Enter marks for " + subject + ": ");
-        return double.Parse(Console.ReadLine());
+        Console.Write($"Enter marks for {subject}: ");
+        return float.Parse(Console.ReadLine());
     }
 }
