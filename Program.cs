@@ -43,6 +43,13 @@ public class Program
         Calculator c = new Calculator();
         c.DoMath();
 
+        Factorial f = new Factorial();
+        f.Multiply();
+
+        SwitchStatement ss = new SwitchStatement();
+        ss.Result();
+
+
 
     }
 }
