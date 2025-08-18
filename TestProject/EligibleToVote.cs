@@ -1,20 +1,15 @@
 using System;
 
-public class EligibleToVote
+class EgibleToVote
 {
-    public void Vote()
+    public void Age()
     {
-
-        Console.Write("Enter your age: ");
-        int age = Convert.ToInt32(Console.ReadLine());
-
-        if (age >= 18)
-        {
-            Console.WriteLine("You are eligible to vote.");
-        }
-        else
-        {
-            Console.WriteLine("You are not eligible to vote.");
-        }
+        Console.WriteLine("Enter your age:");
+        int age = int.Parse(Console.ReadLine());
+    }
+        public bool IsEligible()
+    {
+        return age >= 18;
     }
 }
+

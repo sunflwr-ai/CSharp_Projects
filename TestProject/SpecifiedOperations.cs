@@ -2,34 +2,34 @@
  WAP in C# to test if the input sides are valid side of triangle or not .Also display the area of triangles.
 If the input sides are valid.
 */
+
 using System;
-
-class SpecifiedOperation
+public class SpecifiedOperation
 {
-    public void Operation()
+    public void GetSides()
     {
-        Console.Write("Enter side a: ");
-        double a = Convert.ToDouble(Console.ReadLine());
+        Console.Write("Enter side 1 : ");
+        double a = Convert.ToDouble(Console.Read());
+        Console.Write("Enter side 2 : ");
+        double b = Convert.ToDouble(Console.Read());
+        Console.Write("Enter side 3 : ");
+        double c = Convert.ToDouble(Console.Read());
+    }
 
-        Console.Write("Enter side b: ");
-        double b = Convert.ToDouble(Console.ReadLine());
-
-        Console.Write("Enter side c: ");
-        double c = Convert.ToDouble(Console.ReadLine());
-
-        if (a + b > c && a + c > b && b + c > a)
+    public void TestSides()
+    {
+ if (IsValidTriangle( a , b , c ))
         {
-            Console.WriteLine("Valid triangle.");
-
-            double s = (a + b + c) / 2;
-            double area = Math.Sqrt(s * (s - a) * (s - b) * (s - c));
-
-            Console.WriteLine("Area = " + area);
+            Console.WriteLine("These sides form a valid triangle.");
         }
         else
         {
-            Console.WriteLine("Not a valid triangle.");
+            Console.WriteLine("These sides do NOT form a valid triangle.");
         }
     }
-}
 
+    static bool IsValidTriangle(double a, double b, double c)
+    {
+        return (a + b > c) && (a + c > b) && (b + c > a);
+    }
+}

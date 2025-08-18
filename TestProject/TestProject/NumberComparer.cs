@@ -1,8 +1,8 @@
 using System;
-{
+
     public class NumberComparer
     {
-        public static void Compare()
+        public void Compare()
         {
             Console.WriteLine("\n-- Compare Two Numbers --");
             Console.Write("Enter first number: ");
@@ -18,4 +18,4 @@ using System;
                 Console.WriteLine("Both are equal.");
         }
     }
-}
+

@@ -1,4 +1,5 @@
 ﻿using System;
+using ConsoleApp1;
 
 public class Program
 {
@@ -21,33 +22,41 @@ public class Program
         info.Details();
         Console.ReadLine();
 
-         CurrencyConverter converter = new CurrencyConverter();
-        converter.ConvertCurrency();
+        CurrencyConverter converter = new CurrencyConverter();
+        converter.RunConverter();
 
-        UserPreferences preferences = new UserPreferences();
-        preferences.GetPreferences();
+        UserPreference preferences = new UserPreference();
+        preferences.GetUserInfo();
+
 
         NumberComparer nc = new NumberComparer();
         nc.Compare();
-        
-        Voting v = new Voting();
-        v.CheckEligibility();
 
-        MarksHelper m = new MarksHelper();
-        m.InputMark();
+        EligibleToVote vote = new EligibleToVote();
+        vote.Vote();
 
         SpecifiedOperation so = new SpecifiedOperation();
-        so.GetSides();
-        so.TestSides();
+        so.Operation();
 
-        Calculator c = new Calculator();
-        c.DoMath();
 
-        Factorial f = new Factorial();
-        f.Multiply();
+        Pattern p = new Pattern();
+        p.Pattern_Display();
 
-        SwitchStatement ss = new SwitchStatement();
-        ss.Result();
+        Switch s = new Switch();
+        s.Display();
+
+        AverageMarks am = new AverageMarks();
+        am.Marks();
+
+
+
+
+
+
+
+
+
+
 
 
 

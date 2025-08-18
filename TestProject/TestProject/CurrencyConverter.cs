@@ -4,7 +4,7 @@ namespace ConsoleApp1
 {
     public class CurrencyConverter
     {
-        public static void RunConverter()
+        public  void RunConverter()
         {
             Console.WriteLine("\n-- Currency Converter --");
             Console.Write("Enter USD amount: ");
